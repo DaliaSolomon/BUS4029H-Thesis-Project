@@ -1,5 +1,5 @@
 # BUS4029H Thesis Project
-### What impact do maternity benefits have onthe healthcare expenditure by medicalschemes in South Africa?
+### What impact do maternity benefits have onthe healthcare expenditure by medical schemes in South Africa?
 
 ## 1 - Creation of Single Data Set
 This interactive python notebook reads in the Excel shreadsheet containing the hospital claims data for Schemes A,B and C. It concatenates the data together and creates a single data frame containing all the claims. This data frame is then exported as an Excel spreadsheet.
