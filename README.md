@@ -5,7 +5,7 @@
 This interactive python notebook reads in the Excel shreadsheet containing the hospital claims data for Schemes A,B and C. It concatenates the data together and creates a single data frame containing all the claims. This data frame is then exported as an Excel spreadsheet.
 
 ## 2 - Cleaning Process
-This notebook reads in the single data frame created in the previous notebook. It then performs the following tasks:
+This notebook reads in the spreadsheet created in the previous notebook. It then performs the following tasks:
 - Formats all column headings to be in title case
 - Removes any fully duplicated rows 
 - Sets a number of columns' data type to category inlcuding
@@ -25,7 +25,7 @@ The Data is then split. A data frame for claims corresponding to the mothers onl
 Two Excel Spreadsheets are exported. One containing the cleaned data of the mothers' hospital claims and one containing the infants' hospital claims.
 
 ## 3 - Analysis of Mothers
-This notebook reads in the single data frame relating to the hospital claims data for the mothers. It then analyses the following:
+This notebook reads in the spreadhseet relating to the hospital claims data for the mothers. It then analyses the following:
 
 ### Related to the Number of Caeserean Sections and Natural Deliveries Each Year
 - The number of natural and caesarean deliveries recorded in the admissions category column 
@@ -47,7 +47,7 @@ This notebook reads in the single data frame relating to the hospital claims dat
 - The average hospital benefit, primary provider, radiology, pathology, pharmacy and miscellaneous costs for caesarean and natural deliveries respectively 
 - The yearly absolute and percentage change in average hospital benefit, primary provider, radiology, pathology and pharmacy costs
 
-### Related to complications
+### Related to Complications
 - The number of mothers who experienced distruption of caesarean section wound 
 - The number of mothers who experienced infections of the obstetric wound 
 - The number of mothers who experienced obstetic high vaginal laceration
@@ -63,7 +63,7 @@ This notebook reads in the single data frame relating to the hospital claims dat
 - The effect of age on delivery method 
 
 ## 4 - Analysis of Infants
-This notebook reads in the single data frame relating to the hospital claims data for the infants. It then analyses the following:
+This notebook reads in the spreadsheet relating to the hospital claims data for the infants. It then analyses the following:
 
 - The number of babies who were experienced complications
 - The number of complications that were caused during labour and delivery
@@ -81,4 +81,14 @@ This notebook reads in the single data frame relating to the hospital claims dat
     - The average cost of infant feeding problems 
     - The correlation between feeding problems and the method of delivery
 
+## 5 - Creation of Data Sets for Predictions
+This notebook reads in the spreadsheet relating to the hospital claims data for the mothers. It subdivides the claims into two data frames associated with natural and caesarean delivery. The outlires within the total cost column of each of these data frames are then removed. The data frames are then exported to Excel spreadsheets.
 
+## 6 - Predictions of Total Costs 
+This notebook reads in the two spreadsheets created in the previous section relating to natural and caeserean deliveries. For each data frame, the date and total cost columns are extracted and used as inputs to the functions contained in the fbprophet library. This library allows for predictions to be made using historical data. 
+
+## 7 - Analysis of Exposure Data 
+This notebook reads in the spreadsheets relating to the exposure data. It merges the data into one single data frame and removes any data relating to members who live outside of South Africa. From this the number of female members of childbearing age per year for each scheme.
+
+## 8 - Analysis of Birth Rates
+This notebook reads in both the data relating to the mothers' hospital claims as well as the exposure data. The number of births per year, based on admission catgeories, is then calculated. The number of births is then divided by the number of women covered in that year in order to obtain a birth rate. 
